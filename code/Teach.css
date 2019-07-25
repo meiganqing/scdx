@@ -1,0 +1,78 @@
+.teachel {
+    padding-right: 0px;
+}
+/* 分页 */
+.el-pagination.is-background .el-pager li:not(.disabled).active{
+background: #a48638
+}
+.teach_elsum {
+    height: 56x !important;
+    line-height: 56x !important;
+    text-align: center!important;
+    border-bottom: 1px solid #ececec!important;
+    font-size: 18px!important;
+}
+
+#teach_elsum_title {
+    font-family: "Microsoft YaHei";
+    font-size: 16px!important;
+}
+
+.tem_e {
+    width: 100%!important;
+    text-align: center!important;
+    min-width: ""!important;
+    border-bottom: 1px solid #ececec!important;
+    font-size: 16px!important;
+}
+
+.tem_el {
+    font-size: 14px!important;
+    text-align: center;
+    background: #fdfdfd !important;
+    color: #808080!important;
+    border-bottom: 1px solid #ececec!important;
+    width: 100%!important;
+    padding: 0!important;
+    min-width: 0!important;
+    height: 37.23px !important;
+    line-height: 37.23px !important;
+}
+
+.tem_el a {
+    text-decoration: none;
+    color: #808080!important;
+}
+
+.tem_el:hover a {
+    color: #fff !important;
+}
+
+.tem_el.is-active {
+    color: #fff !important;
+    background: #c5c5c5 !important;
+    outline: none !important;
+}
+
+.tem_el:hover {
+    outline: 0 !important;
+    color: #fff !important;
+    background: #c5c5c5 !important;
+}
+
+.TheColumn {
+    flex: 1;
+    background: white!important;
+    padding: 10!important;
+}
+
+.el-breadcrumb__inner {
+    font-weight: 400!important;
+}
+
+
+/* 侧边栏小箭头 */
+
+.el-submenu__title i {
+    color: #ffffff!important;
+}

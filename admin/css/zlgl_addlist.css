@@ -1,0 +1,23 @@
+.layui-table td {
+    border: none;
+}
+
+.layui-table {
+    display: inline;
+    background-color: #fff;
+    color: #666;
+}
+
+.layui-table td,
+.layui-table th {
+    padding: 2px 0;
+}
+
+.layui-table img {
+    max-width: 113px;
+}
+
+.layui-upload-list {
+    margin: 0;
+    line-height: 0;
+}

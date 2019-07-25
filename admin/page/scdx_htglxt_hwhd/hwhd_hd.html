@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../layuiadmin/style/admin.css" media="all">
+    <script type="text/javascript" charset="utf-8" src="../../Widget/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../Widget/ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../Widget/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <title>问题添加</title>
+</head>
+<style type="text/css">
+    .fly-list-info {
+        position: relative;
+        font-size: 13px;
+        color: #999;
+        padding: 5px 0px;
+    }
+    
+    .fly-list-info cite {
+        color: cornflowerblue;
+    }
+    
+    .fly-list-info span {
+        color: orangered;
+    }
+    
+    .btn-small {
+        height: 20px;
+        line-height: 20px;
+    }
+    
+    .btn-content {
+        /*text-align: right;*/
+    }
+    
+    .layui-btn {
+        background-color: #d3bc93;
+    }
+    
+    .layui-btn-primary {
+        background-color: #ffffff;
+    }
+</style>
+
+<body>
+    <div class="layui-fluid">
+        <div class="layui-row layui-col-space15">
+            <form class="layui-form" action="">
+                <input type="hidden" name="XDLM问题编号" id="问题编号">
+
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+
+                        <div class="layui-card-body layui-row layui-col-space10">
+                            <div class="fly-panel detail-box">
+                                <h1 id="问题名称"></h1>
+                                <div class="fly-list-info">
+                                    <a href="/u/23138304" link="">
+                                        <cite id="提问人"></cite>
+                                    </a>
+                                    <span id="提问时间"></span>
+                                </div>
+                                <div class=" layui-text " id="问题内容" style="padding: 10px;">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="layui-card">
+                        <div class="layui-card-body layui-row layui-col-space10">
+                            <div class="fly-panel detail-box" id="flyReply">
+                                <fieldset class="layui-elem-field layui-field-title" style="text-align: center;">
+                                    <legend>回帖</legend>
+                                </fieldset>
+                                <ul class="layui-timeline" id="answerContent">
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="layui-card">
+                        <div class="layui-card-body layui-row layui-col-space10">
+                            <div class="fly-panel detail-box" id="flyReply">
+                                <!--<fieldset class="layui-elem-field layui-field-title" style="text-align: center;">
+										<legend>回帖</legend>
+									</fieldset>-->
+
+                                <!--<div class="layui-form layui-form-pane">
+										<script type="text/plain" id="container" style="width:100%;height: 200px;">
+
+										</script>
+
+									</div>-->
+                            </div>
+                            <div class="layui-col-lg12 layui-col-md12 layui-col-xs12 layui-col-sm12 ">
+                                <label class="layui-form-label">回答问题：</label>
+                                <div class="layui-input-block">
+                                	<textarea id="回答内容" name="XDLM回答内容" style="display: none;"></textarea>
+                                    <!--<input type="text"  id="回答内容" placeholder="请输入" lay-verify="required" autocomplete="on" class="layui-input">-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item" style="text-align: center;">
+                        <!--<div class="layui-input-block">-->
+                        <button class="layui-btn" id="submit" lay-submit="submit" lay-filter="submit">提交回复</button>
+                        <!--</div>-->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="editDisplay" style="display: none;padding:20px">
+        <input type="hidden" id="editId" />
+        <input type="text" id="修改内容" placeholder="请输入" lay-verify="required" autocomplete="on" class="layui-input">
+        <div class="layui-form-item" style="text-align: center;padding-top: 20px;">
+            <!--<div class="layui-input-block">-->
+            <button class="layui-btn" id="editSubmit">修改</button>
+            <!--</div>-->
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script src="../../layuiadmin/layui/layui.js"></script>
+<script src="../../js/configData.js"></script>
+<script src="../../js/SY_wwbh_common.js"></script>
+<script src="../../js/scdx_htglxt_hwhd/hwhd_hd.js"></script>

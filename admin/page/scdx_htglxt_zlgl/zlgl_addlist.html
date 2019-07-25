@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../layuiadmin/style/admin.css" media="all">
+    <!-- <link rel="stylesheet" href="../../css/zlgl_addlist.css" media="all"> -->
+
+    <script type="text/javascript" charset="utf-8" src="../../Widget/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../Widget/ueditor/ueditor.all.min.js">
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../../Widget/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <title>文物添加</title>
+    <style>
+        body .layui-form-label {
+            width: 120px;
+        }
+        
+        body .layui-input-block {
+            margin-left: 150px;
+        }
+        
+        .layui-btn {
+            background-color: #d3bc93;
+        }
+        
+        .layui-btn-primary {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layui-fluid">
+        <div class="layui-row layui-col-space15">
+            <form class="layui-form" action="">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+
+                        <div class="layui-card-body layui-row layui-col-space10" style="min-height: 400px;">
+                            <div class="layui-col-lg12 layui-col-md12 layui-col-xs12 layui-col-sm12 ">
+                                <label class="layui-form-label">资料名称：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" id="资料名称" name="XDLM资料名称" placeholder="请输入资料名称" lay-verify="required" autocomplete="on" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-col-lg12 layui-col-md12 layui-col-xs12 layui-col-sm12 ">
+                                <label class="layui-form-label">日期：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="XDLM添加时间" id="添加时间" placeholder="请输入日期" lay-verify="required" autocomplete="on" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-col-lg12 layui-col-md12 layui-col-xs12 layui-col-sm12">
+                                <label class="layui-form-label">附件：</label>
+                                <div class="layui-input-block">
+
+                                    <div class="layui-upload">
+                                        <button type="button" class="layui-btn" id="changefileFJ">
+								 					 	<i class="layui-icon">&#xe67c;</i>上传文件
+													</button>
+                                        <input type="hidden" id="fj">
+                                        <div class="layui-upload-list">
+                                            <table class="layui-table">
+                                                <tbody id="showfileFJ">
+                                                    <tr type="new">
+                                                        <td>
+                                                            <div class="imgDiv" style="cursor: pointer;">
+                                                                <div class="layadmin-homepage-pad-ver">
+                                                                    <img onclick=lookPicx() id="fileImg" class="layadmin-homepage-pad-img" src="" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="layui-form-item ">
+                        <div class="layui-input-block " style="margin-left: 0px;text-align: center; ">
+                            <button class="layui-btn " id="submit" lay-submit="submit" lay-filter="submit">添加</button>
+                            <button type="reset " class="layui-btn layui-btn-primary ">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="../../layuiadmin/layui/layui.js "></script>
+<script src="../../Widget/uploadImage/upload.js "></script>
+<script src="../../js/configData.js ">
+</script>
+<script src="../../js/SY_wwbh_common.js "></script>
+<script src="../../js/scdx_htglxt_zlgl/zlgl_addlist.js "></script>
+<script src="../../Widget/videojs/js/video.min.js "></script>

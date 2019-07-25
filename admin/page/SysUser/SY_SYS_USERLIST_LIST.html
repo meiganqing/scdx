@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../layuiadmin/style/admin.css" media="all">
+    <link rel="stylesheet" href="./lib/css/selectpage.css" media="all">
+    <link rel="stylesheet" href="./lib/css/font-awesome/css/font-awesome.css" media="all">
+    <link rel="stylesheet" href="../../Widget/vertify/verify.css" />
+    <title>用户列表</title>
+</head>
+<style>
+    .sp_clear_btn {
+        display: none!important;
+    }
+    
+    .sp_result_area {
+        z-index: 198910160!important;
+    }
+    
+    .sp_container,
+    .sp_container_combo {
+        width: 100%!important;
+    }
+    
+    .layui-btn {
+        background-color: #d3bc93;
+    }
+    
+    .layui-btn-danger {
+        background-color: #db1616;
+    }
+    
+    #updateTable {
+        background-color: #6079e6;
+    }
+    
+    .layui-laypage .layui-laypage-curr .layui-laypage-em {
+        background-color: #d3bc93;
+    }
+    
+    .own-btn-blue {
+        background-color: #4BC4CE;
+    }
+    
+    .own-btn-orange {
+        background-color: #d3bc93;
+    }
+    
+    .own-btn-red {
+        background-color: #db1616;
+    }
+</style>
+
+<body>
+    <div class="layui-fluid">
+        <div class="layui-card">
+            <!-- <div class="layui-form layui-card-header layuiadmin-card-header-auto">
+                <div class="layui-row">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">查询类别：</label>
+                        <div class="layui-inline">
+                            <select id="cxlb" lay-search lay-filter="cxlb">
+									<option value=""></option>
+								</select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">关键字：</label>
+                        <div class="layui-input-inline">
+                            <input class="layui-input" name="keyWords" id="keyWords" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="layui-inline" style="margin-left: 30px;">
+                        <button class="layui-btn " type="button" name="searchData" id="searchData">查询</button>
+                    </div>
+                    <div class="layui-inline">
+                        <button class="layui-btn " id="updateTable" onclick="updateDataTable()">刷新</button>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <div class="layui-card-body">
+                <table id="tableList" lay-filter="tableList">
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<script type="text/javascript" src="../../layuiadmin/layui/layui.js"></script>
+<script type="text/javascript" src="../../lib/jquery.js"></script>
+<script type="text/javascript" src="./lib/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="./lib/js/store.min.js"></script>
+<script type="text/javascript" src="../../Widget/vertify/verify.js">
+</script>
+<script type="text/javascript" src="../../js/configData.js"></script>
+<script type="text/javascript" src="./js/SysUser_common.js"></script>
+<script type="text/javascript" src="./js/SY_SYS_USERLIST_LIST.js"></script>
+
+
+<!-- <script type="text/html" id="opeTpl">
+    <a class="layui-btn layui-btn-xs own-btn-yellow" lay-event="setting" id="setting">配置</a>
+    <a class="layui-btn layui-btn-xs own-btn-blue" lay-event="edit" id="edit">修改</a>
+    <a class="layui-btn layui-btn-xs own-btn-red" lay-event="del">删除</a>
+</script> -->
+<!-- <script type="text/html" id="colorYHM">
+    {{ QueryKeyColor(d['mUserName']) }}
+</script>
+<script type="text/html" id="colorZSXM">
+    {{ QueryKeyColor(d['realName']) }}
+</script>
+<script type="text/html" id="colorSSKF">
+    {{ QueryKeyColor(d['storages']) }}
+</script>
+<script type="text/html" id="colorYHJB">
+    {{ QueryKeyColor(d['mUserLevel']) }}
+</script>
+<script type="text/html" id="colorJS">
+    {{ QueryKeyColor(d['Role']) }}
+</script> -->
+
+<script type="text/html" id="mTableToolbar">
+
+    <div class="layui-btn-container">
+        <button type="button" class="layui-btn layui-btn-sm" lay-event="add">
+        <i class="layui-icon">&#xe654;</i> 添加
+        </button>
+        <button class="layui-btn layui-btn-danger layui-btn-sm" lay-event="allDel">批量删除</button>
+        <button class="layui-btn layui-btn-sm" id="updateTable" onclick="updateDataTable()">刷新</button>
+    </div>
+
+</script>
+
+<script type="text/html" id="opeTpl">
+    <a class="layui-btn layui-btn-xs own-btn-blue" lay-event="edit"> 权限设置
+	</a>
+    <a class="layui-btn layui-btn-xs own-btn-orange" lay-event="setting">编辑
+	</a>
+    <a class="layui-btn layui-btn-xs own-btn-red" lay-event="del"> 删除
+    </a>
+</script>

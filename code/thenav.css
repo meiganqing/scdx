@@ -1,0 +1,44 @@
+/* body .el-menu--horizontal:nth-child(4) .el-menu--popup {
+    position: relative!important;
+    left: 10%!important;
+}
+
+body .el-menu--horizontal:nth-child(5) .el-menu--popup {
+    position: relative!important;
+    left: 34%!important;
+}
+
+body .el-menu--horizontal:nth-child(6) .el-menu--popup {
+    position: relative!important;
+    left: 41%!important;
+}
+
+body .el-menu--horizontal:nth-child(7) .el-menu--popup {
+    position: relative!important;
+    left: 53%!important;
+} */
+
+#jianjie {
+    margin-left: 10%;
+}
+
+#shiyan {
+    margin-left: 34%;
+}
+
+#xnfz {
+    margin-left: 41%;
+}
+
+#ziliao {
+    margin-left: 53%;
+}
+
+
+/*.el-submenu .hight-light{
+	color: red!important;
+}*/
+
+.activenav {
+    color: #990000!important;
+}

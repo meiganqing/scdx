@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+     <link rel="stylesheet" href="../../Widget/vertify/verify.css" />
+    <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
+    <!--<link rel="stylesheet" href="/plugins/font-awesome/css/font-awesome.min.css" media="all">-->
+    <title></title>
+    <style>
+        .layui-table-header table th {
+            text-align: center;
+        }
+        
+        td {
+            text-align: center;
+        }
+        
+        .layui-form-select {
+            width: 80%;
+        }
+        
+        .layui-btn {
+            background-color: #d3bc93;
+        }
+        
+        .layui-btn-danger {
+            background-color: #db1616;
+        }
+        
+        #updateTable {
+            background-color: #6079e6;
+        }
+        
+        .layui-laypage .layui-laypage-curr .layui-laypage-em {
+            background-color: #d3bc93;
+        }
+        
+        .own-btn-blue {
+            background-color: #4BC4CE;
+        }
+        
+        .own-btn-orange {
+            background-color: #d3bc93;
+        }
+        
+        .own-btn-red {
+            background-color: #db1616;
+        }
+        
+        #saveRole {
+            background-color: #FF5722;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container" style="padding:10px;">
+        <div style="text-align:left">
+            <form class="layui-form">
+
+                <div class="layui-form-item layui-inline frt">
+                    <div class="layui-inline ">
+                        <button class="layui-btn layui-btn-danger btn-xs" type="button" id="saveRole">确认设置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <table class="layui-table" id="demo" lay-filter="xmTable">
+        </table>
+    </div>
+
+    <script type="text/html" id="shqx">
+        <input type="checkbox" name="checkedValue" lay-skin="primary" lay-filter="checkedValue" value="{{d.rolename}}">
+    </script>
+    <script type="text/html" id="opeTpllcjd">
+        <a class="layui-btn  layui-btn-xs layui-btn-warm" lay-event="edit">编辑</a>
+
+        <a class="layui-btn  layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+    </script>
+
+</body>
+
+</html>
+<script type="text/javascript" src="../../layuiadmin/layui/layui.js"></script>
+<script type="text/javascript" src="./lib/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="./lib/js/store.min.js"></script>
+<script type="text/javascript" src="../../Widget/vertify/verify.js">
+</script>
+<script type="text/javascript" src="../../js/configData.js"></script>
+<script type="text/javascript" src="./js/SysUser_common.js"></script>
+<script type="text/javascript" src="./js/SY_SYS_USERROLE_SET_LIST.js"></script>

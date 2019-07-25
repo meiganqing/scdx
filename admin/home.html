@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="./layuiadmin/layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="./layuiadmin/style/admin.css" media="all">
+	</head>
+	<style type="text/css">
+		.module-top {
+			height: 180px;
+		}
+		
+		.module-bottom {
+			height: 390px;
+		}
+		
+		.module-middle {
+			height: 400px;
+		}
+		
+		.list {
+			/*list-style: square inside;*/
+			border-bottom: 1px solid #efefef;
+			position: relative;
+			padding-right: 130px;
+			line-height: 35px;
+		}
+		
+		.list-question {
+			border-bottom: 1px solid #efefef;
+			position: relative;
+			padding-right: 130px;
+			padding-left: 50px;
+		}
+		
+		.li-left:hover {
+			color: #65C0ED;
+		}
+		
+		.li-left {
+			cursor: pointer;
+			float: left;
+			width: 100%;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			font-size: 12px;
+		}
+		
+		.question-left {
+			/*width: 30%;*/
+			float: left;
+			width: 40px;
+			height: 40px;
+			/*background: #006699;*/
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			font-size: 12px;
+		}
+		
+		.question-icon {
+			color: #A48638;
+			line-height: 20px;
+			position: absolute;
+			top: 0px;
+			left: 15px;
+		}
+		
+		.question-username {
+			position: absolute;
+			bottom: 3px;
+			left: 0px;
+			width: 50px;
+			height: 15px;
+			line-height: 15px;
+			text-align: center;
+			/*border: 1px solid hotpink;*/
+			background: #D3BC93;
+			border-radius: 3px;
+			color: #FFFFFF;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		
+		.question-middle {
+			width: 70%;
+			float: left;
+			line-height: 45px;
+			padding-left: 10px;
+			cursor: pointer;
+			/*padding:20px 0px 3px 10px;*/
+			font-size: 12px;
+		}
+		
+		.question-middle:hover {
+			color: #65C0ED;
+		}
+		
+		.li-right {
+			/*float: left;*/
+			width: 120px;
+			font-size: 12px;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+		}
+		
+		.operate-module {
+			overflow: hidden;
+		}
+		
+		.operate-module li {
+			float: left;
+			width: 25%;
+			text-align: center;
+			padding: 10px;
+			box-sizing: border-box;
+			cursor: pointer;
+		}
+		
+		.operate-module img {
+			width: 40px;
+			height: 40px;
+		}
+		
+		.lc-module {
+			position: relative;
+			float: left;
+			color: #D5C098;
+			font-weight: 600;
+			padding-bottom: 64px;
+		}
+		
+		.lc-module>ul {
+			/*height: 100%;*/
+			max-height: 315px;
+			display: flex;
+			align-items: flex-end;
+			border-bottom: 2px solid #d3bc93;
+			justify-content: center;
+		}
+		
+		.lc-module li {
+			float: left;
+			width: 50px;
+			/*height: 100%;*/
+			padding: 10px 15px;
+			border-top: 4px solid #d3bc93;
+			border-right: 2px solid #d3bc93;
+			box-sizing: border-box;
+			margin-left: 20px;
+		}
+		
+		.lc-module li>div {
+			width: 100%;
+		}
+		
+		.bottom-text {
+			margin-left: 20px;
+			border-left: 2px solid #d3bc93;
+			padding: 20px 15px;
+			position: absolute;
+			left: 20px;
+			bottom: 0px;
+		}
+		
+		#process {
+			display: flex;
+			align-items: flex-end;
+		}
+		
+		.more {
+			float: right;
+			color: #d3bc93;
+			cursor: pointer;
+		}
+	</style>
+
+	<body class="childrenBody" id="mainHome">
+		<div class="layui-fluid">
+			<div class="layui-row layui-col-space15">
+
+				<div class="layui-row layui-col-space15">
+					<div class="layui-col-md4 layui-col-xs12 layui-col-sm12">
+						<div class="layui-card">
+							<div class="layui-card-header">
+								<span>新闻聚焦</span>
+								<span class="more" onclick="newTab('./page/scdx_htglxt_tzgl/tzgl_list.html?type=2', '新闻聚焦')">更多>></span></div>
+							<div class="layui-card-body">
+								<ul class="module-top" id="gg">
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="layui-col-md4 layui-col-xs12 layui-col-sm12">
+						<div class="layui-card">
+							<div class="layui-card-header"><span>通知公告</span><span class="more" onclick="newTab('./page/scdx_htglxt_tzgl/tzgl_list.html?type=3', '通知公告')">更多>></span></div>
+							<div class="layui-card-body">
+								<ul class="module-top" id="xw">
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="layui-col-md4 layui-col-xs12 layui-col-sm12">
+						<div class="layui-card">
+							<div class="layui-card-header">
+								<span>问题列表</span><span class="more" onclick="newTab('./page/scdx_htglxt_hwhd/hwhd_list.html?type=1', '问题列表')">更多>></span>
+							</div>
+							<div class="layui-card-body">
+
+								<div class="module-top">
+									<ul class="module-top" id="wt">
+
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				
+					<div class="layui-col-md12 layui-col-xs12 layui-col-sm12">
+						<div class="layui-card">
+							<div class="layui-card-header">统计图</div>
+							<div class="layui-card-body module-middle " id="">
+								<div id="kctgEchart" style="height:400px"></div>
+							</div>
+						</div>
+					</div>
+					<div class="layui-col-md12 layui-col-xs12 layui-col-sm12">
+						<div class="layui-card">
+							<div class="layui-card-header">实验流程图</div>
+							<div class="layui-card-body module-bottom " id="process">
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<script src="./layuiadmin/layui/layui.js"></script>
+		<script src="./lib/js/echarts.js"></script>
+		<script src="./js/SY_wwbh_common.js"></script>
+		<script src="./js/home.js"></script>
+
+	</body>
+
+</html>
+<script type="text/html" id="lcTpl">
+
+	{{# layui.each(d,function (key,item){}}
+	<div style="display: none;">{{checkLcType(item.步骤分类)}}</div>
+	{{# if(lastType()=="top"){}}
+
+	<div class="lc-module">
+		<div class="bottom-text">{{item.步骤分类}}</div>
+		<ul>
+			<li>
+				<div>{{item.步骤名称}}</div>
+			</li>
+
+			{{#}else if(lastType()=="middle1"){}}
+			<li>
+				<div>{{item.步骤名称}}</div>
+
+			</li>
+
+			{{#}else if(lastType()=="md2"){}}
+
+		</ul>
+
+	</div>
+	<div class="lc-module">
+		<div class="bottom-text">{{item.步骤分类}}</div>
+		<ul>
+			<li>
+				<div>{{item.步骤名称}}</div>
+			</li>
+			{{#}}} {{#if(item==d.length-1){}}
+		</ul>
+
+	</div>
+	{{#}}} {{# }) }}
+
+</script>
+<script type="text/html" id="listTpl">
+	{{# layui.each(d,function (key,item){}}
+	<li class="list" onclick="skipUrl('{{item.分类}}','{{item.id}}')">
+		<div class="layui-row">
+			<div class="li-left">
+				{{item.标题}}
+			</div>
+			<div class="li-right">
+				{{item.日期}}
+			</div>
+		</div>
+	</li>
+	{{# }) }}
+</script>
+<script type="text/html" id="questionTpl">
+	{{# layui.each(d,function (key,item){}}
+	<li class="list-question" onclick="newTab('./page/scdx_htglxt_hwhd/hwhd_list.html?type=1', '问题列表')">
+		<div class="layui-row">
+			<div class="question-left ">
+				<b class="layui-icon layui-icon-username question-icon">&#xe66f;</b>
+				<span class="question-username">{{item.提问人}}</span>
+			</div>
+			<div class="question-middle">
+				{{item.问题名称}}
+			</div>
+			<div class="li-right" style="line-height: 45px;">
+				{{item.提问时间}}
+			</div>
+		</div>
+	</li>
+	{{# }) }}
+</script>

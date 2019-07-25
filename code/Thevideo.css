@@ -1,0 +1,14 @@
+.el-dialog{
+
+    background:rgba(207, 224, 229, 0.7);
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    border-radius: 8%;
+    height: 250px;
+   
+}
+.content{
+ color: black;
+ font-size: 20px;
+}

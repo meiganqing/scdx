@@ -1,0 +1,12 @@
+.twobox{
+    position: relative;
+}
+    .twobutton{
+      position: absolute;
+      top: 45%;
+      left: 45%;
+      width: 100px ;
+      height: 50px ;
+      display: block ;
+      border-radius: 10px;
+    }
